@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Drawer } from '@material-ui/core';
+import { Drawer } from '@mui/material';
 
 export const Navbar = styled.div`
     height: 6.5rem;

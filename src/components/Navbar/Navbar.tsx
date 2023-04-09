@@ -1,6 +1,5 @@
 import { DrawerIcon, DrawerItem, DrawerLinks, Navbar as Nav, NavCloseButton, NavLinkContainer, NavMenu, NavbarContainer, StyledDrawer } from "./Navbar.styled";
 import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
-import { Drawer } from '@material-ui/core';
 import { useState } from "react";
 import { FaWindowClose, FaHome } from 'react-icons/fa';
 import { AiOutlineClose } from "react-icons/ai";
