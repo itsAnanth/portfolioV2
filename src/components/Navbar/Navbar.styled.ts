@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 import { Drawer } from '@mui/material';
+import { Menu, IconButton, MenuItem } from '@mui/material'
+
+export const StyledMenu = styled(Menu)`
+    .MuiPaper-root {
+
+        background-color: slategray;
+
+    }
+`
 
 export const Navbar = styled.div`
     height: 6.5rem;
@@ -167,8 +176,10 @@ export const ThemeIconButton = styled.div`
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    transform: translateY(-10px);
-    margin-right: 10;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: 'hidden';
     background-color: ${({ theme }) => theme.primary};
     border: 2px solid ${({ theme }) => theme.type === 'light' ? 'black' : 'white'};
@@ -176,4 +187,53 @@ export const ThemeIconButton = styled.div`
     align-items: 'center';
     justify-content: 'center';
     padding: 0;
+
+`;
+
+export const StyledIconButton = styled(IconButton)`
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    @media (hover: hover) and (pointer: fine) {
+        :hover {
+            transform: scale(1.3);
+        }
+    }
 `
+
+// export const SettingsMenu = styled.div`
+//     background-color: blue;
+//     position: fixed;
+//     height: 90vh;
+//     width: 90vw;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     display: flex;
+//     justify-content: center;
+// `;
+
+// export const SettingsMenuItem = styled.div`
+//     background-color: red;
+//     margin: 30px 30px;
+//     width: 100%;
+//     height: 5rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     padding: 3rem;
+// `;
+
+// export const SettingsMenuHeading = styled.div`
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     background-color: green;
+//     flex: 0.3;
+// `

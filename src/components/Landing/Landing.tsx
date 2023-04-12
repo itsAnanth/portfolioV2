@@ -6,6 +6,8 @@ import {
     FaStackOverflow
 } from 'react-icons/fa';
 import landingImage from '../../assets/png/image_processing20200510-10310-1kcucxz.png';
+import Typewriter from "typewriter-effect";
+import landingData from '../../data/landing.json';
 
 function Landing() {
 
@@ -14,21 +16,21 @@ function Landing() {
             <LandingContainer>
                 <LandingContainerLeft>
                     <LeftContent>
-                        <LandingSocial>
+                        <LandingSocial target="_blank" href={landingData.socials.github}>
                             <FaGithub />
                         </LandingSocial>
-                        <LandingSocial>
+                        <LandingSocial target="_blank" href={landingData.socials.discord}>
                             <FaDiscord />
                         </LandingSocial>
-                        <LandingSocial>
+                        {/* <LandingSocial href={landingData.socials.github}>
                             <FaTwitter />
-                        </LandingSocial>
-                        <LandingSocial>
+                        </LandingSocial> */}
+                        <LandingSocial target="_blank" href={landingData.socials.stackoverflow}>
                             <FaStackOverflow />
                         </LandingSocial>
                     </LeftContent>
                 </LandingContainerLeft>
-                <LandingImage 
+                <LandingImage
                     src={landingImage}
                     alt="moyai"
                 >
@@ -38,7 +40,12 @@ function Landing() {
                     <RightContent>
                         <h6>Full Stack Developer</h6>
                         <h1>Ananth</h1>
-                        <p>Not so interesting stuff goes here</p>
+                        <Typewriter
+                            
+                            options={{ wrapperClassName: 'wrap', skipAddStyles: true, loop: true, autoStart: true, strings: ['Professional Bug Dev', 'Student'] }}
+                        ></Typewriter>
+
+                        {/* <p>Not so interesting stuff goes here</p> */}
                     </RightContent>
                 </LandingContainerRight>
             </LandingContainer>

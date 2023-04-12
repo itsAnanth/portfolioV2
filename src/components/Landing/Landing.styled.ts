@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Typewriter, { TypewriterClass } from 'typewriter-effect';
 
 
 export const Landing = styled.div`
@@ -35,6 +36,7 @@ export const LandingImage = styled.img`
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s;
     border-color: ${({ theme }) => theme.secondary};
+    /* animation: animate 15s linear infinite; */
 
     @media (max-width: 1100px) {
         width: 350px;
@@ -46,14 +48,40 @@ export const LandingImage = styled.img`
         height: 300px;
     }
 
+    @media (max-width: 710px) {
+        width: 250px;
+        height: 250px;
+    }
+
     @media (max-width: 600px) {
         width: 200px;
         height: 200px;
         left: 50%;
         top: 30%;
-        border: 8x solid #eaeaea;
+        border: 3px solid #eaeaea;
         transform: translate(-50%, -50%);
     }
+
+
+    @keyframes animate {
+	0% {
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	}
+	15% {
+		box-shadow: 0px 0px 30px ${({ theme }) => theme.primary};
+	}
+
+    35% {
+		box-shadow: 0px 0px 30px red;
+    }
+
+    50% {
+		box-shadow: 0px 0px 30px ${({ theme }) => theme.primary50};
+    }
+	100% {
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	}
+}
 `;
 
 export const LandingContainerLeft = styled.div`
@@ -85,7 +113,7 @@ export const LeftContent = styled.div`
     }
 `;
 
-export const LandingSocial = styled.div`
+export const LandingSocial = styled.a`
     font-size: 35px;
     margin: 0 1rem;
     transition: all 0.3s;
@@ -118,9 +146,10 @@ export const LandingContainerRight = styled.div`
     }
 `;
 
+
 export const RightContent = styled.div`
     /* width: 100%; */
-    padding-right: 10%;
+    padding-right: 20%;
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -145,7 +174,7 @@ export const RightContent = styled.div`
         margin: 1rem 0;
     }
 
-    p {
+    .wrap {
         text-align: left;
         margin-top: 1.45rem;
         font-weight: 500;
@@ -162,7 +191,7 @@ export const RightContent = styled.div`
             font-size: 3rem;
         }
 
-        p {
+        .wrap {
             margin-top: 0.3rem;
             margin-bottom: 1rem;
             font-weight: 500;
@@ -178,7 +207,14 @@ export const RightContent = styled.div`
     }
 
     @media (max-width: 800px) {
-        padding-left: 15%;
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+        padding-left: 25%;
     }
 
     @media (max-width: 660px) {
@@ -204,7 +240,7 @@ export const RightContent = styled.div`
             text-align: center;
         }
 
-        p {
+        .wrap {
             margin: 0 auto;
             text-align: center;
             width: 90%;
