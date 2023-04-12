@@ -1,10 +1,11 @@
 import { DrawerIcon, DrawerItem, DrawerLinks, Navbar as Nav, NavCloseButton, NavLinkContainer, NavMenu, NavbarContainer, StyledDrawer, StyledIconButton, StyledMenu, ThemeIconButton } from "./Navbar.styled";
-import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
+import { IoMenuSharp } from 'react-icons/io5';
 import { useState } from "react";
 import { FaHome } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
-import { IconButton, MenuItem } from '@mui/material'
-import { Close } from '@mui/icons-material'
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import Close from '@mui/icons-material/Close'
 import { Theme, all } from '../../theme/theme';
 
 

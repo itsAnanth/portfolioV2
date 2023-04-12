@@ -4,7 +4,7 @@ import { themeData } from "../data/themeData";
 
 const ThemeContext = createContext<any>(null);
 
-function ThemeContextProvider(props: PropsWithChildren) {
+function ThemeContextProvider(props: any) {
 
     console.log(themeData)
     const [theme, setTheme] = useState<Theme>(themeData);

@@ -16,6 +16,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0",
     "react": "^17.0.0",
     "react-awesome-reveal": "^4.2.3",
     "react-dom": "^17.0.0",

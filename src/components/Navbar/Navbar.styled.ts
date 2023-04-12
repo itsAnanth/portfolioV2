@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Drawer } from '@mui/material';
-import { Menu, IconButton, MenuItem } from '@mui/material'
+import Drawer from '@mui/material/Drawer';
+import Menu from '@mui/material/Menu';
+import IconButton from '@mui/material/IconButton';
 
 export const StyledMenu = styled(Menu)`
     .MuiPaper-root {
