@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { About, BackToTop, Landing, Navbar } from './components'
+import { About, BackToTop, Landing, Loader, Navbar } from './components'
 import { ThemeContext, ThemeProvider } from 'styled-components'
 import { blueThemeDark, greenThemeDark, redThemeDark, redThemeLight } from './theme/theme'
 import { GlobalStyles } from './Global.styled';
@@ -15,6 +15,7 @@ function App() {
 		<div>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
+				<Loader /> 
 
 				<Navbar setTheme={setTheme} />
 				<Landing />

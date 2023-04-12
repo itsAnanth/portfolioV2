@@ -9,6 +9,12 @@ export const GlobalStyles = createGlobalStyle`
 	box-sizing: border-box;
 }
 
+:root {
+	--primary: ${({ theme }) => theme.primary};
+	--secondary: ${({ theme }) => theme.secondary};
+
+}
+
 html, a, button, :hover {
     cursor: url(${cursor}), auto;
 }
